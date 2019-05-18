@@ -1,0 +1,95 @@
+/*
+Top-nav
+//------------------------------
+Sticky nav bar for desktop and tablet
+Collapseable for mobile. 
+*/
+#top-nav {
+	.inline-flex;
+	position: fixed;
+	top:0;
+    width: 100%;
+	background-image: linear-gradient(lighten(@nav-bg-color, 15%), darken(@nav-bg-color, 5%), @nav-bg-color, lighten(@nav-bg-color, 5%) ); 
+	border-bottom: 2px outset @dark-color;
+	border-bottom-left-radius: @default-border-radius;
+	border-bottom-right-radius: @default-border-radius;
+	z-index: 10;
+
+	.logo-and-name {
+		.inline-flex;
+		padding: 0 10px;
+		@media @mobile { text-align:right;width:100%;}
+
+		span {
+			height: 36px;
+			margin: 0 5px 0 15px;
+		}
+		h2 {
+			display:none;
+			padding:5px 0;
+			font-size:2.5em;
+			color: @nav-title-color;
+			@media @mobile {
+				width:100%; margin:0;
+				display:inline-block;
+			}
+		}
+		h3 {
+			display:inline-block;
+			font-family: @unique-text-font;
+			color: @nav-title-color;
+			@media @mobile { display:none; }
+		}
+
+	}
+
+	ul{
+		.wrap-flex;
+		text-align: center;
+		@media @mobile {width: 100%;}
+		//change to inline flex if >= tablet
+		@media @tablet {.inline-flex;}
+		@media @mobile {position: absolute; top:50px; right:0; display:none;}
+		
+		li {
+			width:100%; 
+			//only make 100px if >= tablet
+			@media @tablet { width: auto;}
+			a {
+				display: block;
+				padding: 15px;
+				width:100%;
+				color: @nav-link-color;
+				font-family: @main-text-font;
+				font-weight:bold;
+				@media @mobile {background-color:fadeout(@dark-color, 5%);}
+	
+			}
+		}
+	}
+}
+
+#top-nav.top-nav-transparent {
+	background:none;
+	border-color:transparent;
+	h3, h2 {
+		text-shadow:
+		-1px -1px 0 @main-color,
+		1px -1px 0 @main-color,
+		-1px 1px 0 @main-color,
+		1px 1px 0 @dark-color;
+	}
+	a {@media @mobile {background-color:fadeout(@light-color, 5%);
+		text-shadow:
+		-1px -1px 0 @main-color,
+		1px -1px 0 @main-color,
+		-1px 1px 0 @main-color,
+		1px 1px 0 @dark-color;
+	}
+}
+}
+
+#top-nav.top-nav-colorful {
+	background-image: linear-gradient(lighten(@main-color, 15%), darken(@main-color, 5%), @main-color, lighten(@main-color, 5%) ); 
+	border-color:@highlight-color;
+}

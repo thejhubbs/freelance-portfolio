@@ -1,0 +1,86 @@
+//Main Screen
+//------------------------------
+//The top call to action section.
+//Takes up viewport and has a background image.
+//Set bg img easily in styles.less
+.main-screen {
+	.abs-center-flex;
+	@media @tablet {height:100%;}
+	min-height: 100vh;
+	background: @main-bg-img-link;
+	background-size: cover;
+	border-bottom: 4px solid @light-dark-color;
+
+	h4, h5 { color: @main-color; margin: 25px;}
+	h6 {color:@grey-color;}
+	
+    hr { margin: 12px auto 36px;}
+
+	h1 {
+		color: @light-color;
+		font-size: 6rem;
+		@media @mobile { font-size: 6rem; }
+		@media @hard-tablet { font-size: 8rem; }
+	}
+
+}
+
+.main-screen.main-screen-layout-2 {
+	align-items:bottom;
+	.image-text-overlay-center { 
+		text-align:left;
+		justify-content: flex-start;
+		align-items:flex-end;
+		& > div { padding:25px 25px 45px; }
+		@media @mobile {
+			padding: 10px;text-align:center;
+		}
+	}
+	.title-hr {margin:24px 0; 
+		@media @mobile {margin:24px auto;} }
+	h1 { font-size: 4rem; }
+	h4, h5 {margin-top:10px;}
+	a{}
+}
+
+.main-screen.main-screen-layout-3 {
+	h6 { font-size: 2em;}
+}
+
+//TITLE HR
+.title-hr {
+	width:60%;
+	margin:36px auto;
+}
+
+.banner-quote {
+	text-align: center;
+	@media @desktop { padding: 75px; }
+	@media @mobile { padding: 25px 0 50px;}
+	@media @hard-tablet { padding: 25px 50px 50px;}
+
+	h2 {
+		@media @mobile { 
+			font-size: 2.5rem;
+		}
+	}
+	h4 { color: @light-color;}
+	h5 { color: @dark-light-color;}
+}
+
+//Triple Intro
+//-----------
+//For the simplistic triple-column
+//icon / header / paragraph 
+//Section
+.triple-intro{
+	h3 {margin-top: 25px;}
+}
+
+
+.footer {		
+	h3 {
+		font-family: @unique-text-font;
+		color: @nav-title-color;
+	}
+}

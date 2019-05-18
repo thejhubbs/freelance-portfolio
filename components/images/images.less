@@ -1,0 +1,121 @@
+
+//***************************
+//      IMAGES
+//***************************
+.image {
+	width: 100%;
+	img {
+			display:block;
+			width:90%;
+			margin: 0 auto;
+			border-radius: @default-border-radius;
+	}
+}
+
+//Image/Text Overlay
+//------------------------------
+//A quick overlay for centering text (usually on an image)
+//On mobile it will cover the whole image
+//Table with stretch width, desktop set width.
+.image-text-overlay-center {
+	.abs-center-flex;
+	background-color: @transparent-dark-color;
+	width:100%;
+	height:100%;
+	a.primary-button:hover {
+		color:@light-color;
+	}
+}
+
+
+
+//Use case- when you care more about sizes matching up 
+//Then the display/borders of the pictures.
+//--This will create a "Frame" of fixed height and centered
+//width and a transparent overlay.
+.image-overlay {
+	.abs-center-flex;
+	position: relative;
+	border-radius: @default-border-radius;
+	margin:auto;
+	width:80%;
+	overflow:hidden;
+	div {
+		height:100%;
+		width:100%;
+		position: absolute;
+	}	
+	img{width:100%;}
+}
+
+.neat-img-overlay {
+	.image-overlay;
+	//Find a way to implement change in height.
+	height: 150px;
+	div {
+		background-color: fadeout(@transparent-main-color, 40%);
+	}
+	img {
+		max-width: 100%;
+		max-height: 100%;
+		width: auto;
+		height: auto;
+	}
+}
+
+.light-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-light-color, 40%);}
+}
+
+.dark-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-dark-color, 40%);}
+}
+
+.color-img-overlay {
+	.image-overlay;
+	div {background-color: fadeout(@transparent-main-color, 40%);}
+}
+
+.image-attribution-box {
+	width:90%;
+	margin: auto;
+	border-radius: @default-border-radius;
+	border: 1px outset @grey-color;
+	padding:10px 0;
+	margin: 0 0 25px;
+	h4 {
+		text-align:center;
+		text-decoration:underline;
+		margin: 10px;
+	}
+    h6 {
+		font-style:italic;
+		color: @highlight-color;
+		margin: 10px; 
+	}
+	img {
+		display:block;
+		width:100%;
+		border-radius: 0;
+		// border: 1px inset @grey-color;
+	}
+	
+}
+
+.grey-image-attribution-box {
+	.image-attribution-box;
+	background-color: @dark-light-color;
+}
+
+.light-image-attribution-box {
+	.image-attribution-box;
+	background-color: @light-color;	
+}
+
+
+.main-image-attribution-box {
+	.image-attribution-box;
+	background-color: @light-main-color;
+}

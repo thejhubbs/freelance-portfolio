@@ -1,0 +1,222 @@
+//MAIN COLOR SCHEME
+//Splat provides a growing list of tested colors to try.
+//NOTE: secondary and highlight colors are automatically generated.
+//It would not be reccommended to simply override the default values unless you have the design/color eye. 
+@dark-lavender:  rgb(100, 92, 179); //splat default color
+@coffeehouse: rgb(179, 92, 100);
+@landscape: rgb(92, 179, 100);
+@desert: rgb(179, 179, 100);
+@sky: rgb(100, 179, 179);
+
+@cotton-candy: rgb(179, 92, 179);
+@halloween: rgb(179, 100, 57); 
+@modern: rgb(179, 179, 179);
+@aqua: rgb(70, 70, 194); 
+@autumn: rgb(202, 105, 40);
+
+
+//----The Magic Line---
+@main-color: @coffeehouse;
+//----
+
+//The secondary color; desaturated & spun
+@secondary-color: desaturate(spin(@main-color, 60), 10%);
+// override //@secondary-color: rgb(97, 38, 41);
+
+//Highlight color; saturated, darkened, and lightly spun
+@highlight-color: saturate(darken(spin(@main-color, 10%), 20%), 20%);
+// override //@highlight-color: rgb(47, 37, 146);
+
+
+//-------------------------
+//TESTING NOTES
+//---------------------------
+//@main-color: rgb(19, 0, 187); 
+//high saturation acts as expected, very badly
+
+//@main-color: rgb(167, 158, 250); 
+//Lightness causes issues with buttons, and backgrounds, not bad
+
+//@main-color: rgb(37, 34, 66); 
+//Dark is too dark, but no major flaws
+
+//@main-color: rgb(56, 34, 179); 
+//md saturation acts as expected, fixable but not great
+
+/* ========================================= 
+Quick Style Options
+Use this top section to quickly edit colors 
+and other style settings across the site.
+===========================================*/
+//@dark-color, @light-color, and @grey-color are 
+//automatically seeded from the main color 
+//(desaturated & lightened/darkened)
+@dark-color: desaturate(darken(@main-color, 40%), 20%);
+@light-color: desaturate(lighten(@main-color, 40%), 20%);
+@grey-color:   desaturate(@main-color, 40);
+
+//Cancel & confirm colors with mixed with red & green
+@cancel-color: mix(red, @main-color);
+@confirm-color: mix(green, @main-color);
+
+//The colors for the top navigation bar
+@nav-bg-color: @light-dark-color;
+@nav-title-color: @light-color;
+@nav-link-color: lighten(@light-main-color, 10%);
+//Main area background color
+@page-bg-color: @light-light-color;
+@alt-page-bg-color: @light-color;
+//Side and far background color
+@html-bg-color: @light-color;
+
+//Background image for main call to action
+@bg-img-name: 'computer.jpg';
+//If different source folder edit this line
+@main-bg-img-link: ~"url('../img/@{bg-img-name}')";
+
+//Settings for borders
+@default-border: 1px solid @dark-color;
+@default-border-radius: 4px;
+
+// font-family: 'Mr Dafoe', cursive;
+// font-family: 'Ubuntu', sans-serif;
+// font-family: 'Racing Sans One', cursive;
+//Three default categories for text colors & fonts.
+//Main text is most p tags, links, and buttons. 
+//Should be plain and readable.
+@main-text-color: @dark-color;
+@main-text-font: "Ubuntu";
+//Header text includes most headers, h2s-h5s.
+//Should be easy to read, but stand out.
+@header-text-color: @secondary-color;
+@header-text-font: "Alegreya SC";
+//Top text is loosely h1s & h2s. 
+//Should be unique to capture attention. Displayed large.
+@top-text-color: @highlight-color;
+@top-text-font: "Racing Sans One";
+
+@unique-text-font: "Mr Dafoe";
+
+//Link colors
+@link-color: @main-color;
+@link-hover: @highlight-color;
+
+//Button colors
+@default-button-text-color: @main-text-color;
+@default-button-bg-color: @light-color;
+
+@primary-button-text-color: @light-color;
+@primary-button-bg-color: @highlight-color;
+
+@secondary-button-text-color: @light-color;
+@secondary-button-bg-color: @secondary-color;
+
+@cancel-button-text-color: @light-color;
+@cancel-button-bg-color: @cancel-color;
+
+@confirm-button-text-color: @light-color;
+@confirm-button-bg-color: @confirm-color;
+
+
+/* ========================================= 
+COMPLETE COLORS SET
+===========================================*/
+//Full Colors SET HERE 
+//
+@transparent-main-color: fadeout(@main-color, 30%);
+@transparent-secondary-color: fadeout(@secondary-color, 30%);
+@transparent-highlight-color: fadeout(@highlight-color, 30%);
+@transparent-dark-color: fadeout(@dark-color, 30%);
+@transparent-light-color: fadeout(@light-color, 30%);
+@transparent-grey-color: fadeout(@grey-color, 30%);
+//
+@dark-main-color: darken(@main-color, 10);
+@dark-secondary-color: darken(@secondary-color, 10);
+@dark-highlight-color: darken(@highlight-color, 10);
+@dark-dark-color: darken(@dark-color, 10);
+@dark-light-color: darken(@light-color, 10);
+@dark-grey-color: darken(@grey-color, 10);
+//
+@light-main-color: lighten(@main-color, 10);
+@light-secondary-color: lighten(@secondary-color, 10);
+@light-highlight-color: lighten(@highlight-color, 10);
+@light-dark-color: lighten(@dark-color, 10);
+@light-light-color: lighten(@light-color, 10);
+@light-grey-color: lighten(@grey-color, 10);
+
+
+
+//*************************
+//     TEXT/FONTS
+//*************************
+.set-font-styles(@font, @font-size, @color, @margin, @line-height) {
+    font-family: ~"@{font}, serif";
+    font-size: @font-size;
+    color: @color;
+    margin: @margin;
+    line-height: @line-height;
+}
+
+
+a, html { font-family: @main-text-font;}
+li {line-height:1.8;}
+h1 {
+    .set-font-styles(@unique-text-font, 4rem, @top-text-color, 5px 0, 1); 
+}
+h2 {
+    .set-font-styles(@top-text-font, 3rem, @top-text-color, 5px 0, 1); 
+}
+h3 {
+    .set-font-styles(@header-text-font, 2rem, @header-text-color, 5px 0, 1); 
+}
+h4 {
+    .set-font-styles(@header-text-font, 1.5rem, @header-text-color, 5px 0, 1); 
+}
+h5 {
+    .set-font-styles(@header-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
+}
+h6 {
+    .set-font-styles(@main-text-font, .8rem, @header-text-color, 5px 0, 1.5); 
+}
+p {
+    .set-font-styles(@main-text-font, 1rem, @main-text-color, 5px 0, 1.5); 
+}
+
+.subtext {
+	display:block;
+	font-size:80%;
+}
+
+//***************************
+//      Links
+//***************************
+
+a {
+    color:@link-color;
+    text-decoration:none;
+    
+    &:visited {color:@link-color;}
+    &:hover {color:@link-hover;}
+}
+
+ 
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
