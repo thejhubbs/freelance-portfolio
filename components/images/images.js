@@ -13,7 +13,7 @@ function neatImageOverlay() {
         var imgW = img.width, imgH = img.height;
 
         //Multiply against the ratio to be sure to factor for it
-        if (imgW > imgH * ratio) { img.setAttribute("style", 'height:100%'); }
-        else { img.setAttribute("style", 'width:100%'); }
+        if (imgW > imgH * ratio) { img.setAttribute("style", 'height:100% !important;width:auto !important;'); }
+        else { img.setAttribute("style", 'width:100% !important;height:auto !important;'); }
     }
 }

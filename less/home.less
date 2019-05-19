@@ -15,3 +15,120 @@
 .example-image img {
     width:100%;
 }
+
+
+  .triple-intro-one img {
+    width:100%;
+  }
+  .tiit {
+    margin-top:-43px;
+  }
+  .tiit h3 {
+    display:block; 
+    border-top:1px solid #dbcdce;
+    background-color:@main-color;
+    font-family:@top-text-font;
+    padding:10px 0 5px;
+    margin-bottom:0;
+    color:#842c25;
+    text-align:center;
+  }
+  
+  
+  .tiit p {
+    background-color:@main-color;
+    margin-top:0;
+    padding:5px 20px 20px 32px;
+    height:125px;
+    text-align:left;
+    color:@light-color;
+    border-bottom-left-radius:4px;
+    border-bottom-right-radius:4px;
+    border-bottom:2px solid #842c25;
+    @media @mobile { height:auto;}
+  }
+  
+  .tiip {
+    background-size:cover;
+    border-top-left-radius:4px;
+    border-top-right-radius:4px;
+  }
+
+  .tic .tii:nth-child(1) .tiip {
+    background-image:url("../img/design.jpg");
+  }
+  .tic .tii:nth-child(2) .tiip {
+    background-image:url("../img/development.jpg");
+  }
+  .tic .tii:nth-child(3) .tiip {
+    background-image:url("../img/marketing.jpg");
+  }
+
+  .tiip > div {
+    width:100%;
+    height:200px;
+    background-color:@transparent-main-color;
+  }
+  
+  .tiip .fas {
+    width:100%;
+    text-align:center;
+    height:100%;
+    color:@dark-light-color;
+    font-size:5em;
+    margin-top:35px;
+    text-shadow:1px 1px @dark-highlight-color, -1px 1px @dark-highlight-color, 1px -1px @dark-highlight-color, -1px -1px @dark-highlight-color; 
+  }
+
+
+
+
+
+
+
+
+
+
+#portfolio {
+    h6 {
+        color:@dark-highlight-color;
+        position: absolute;
+        color:transparent;
+    }
+    h4 {
+        color:transparent;
+        position: absolute;
+        top:0;
+        font-family:@top-text-font;
+    }
+    .image-attribution-box {
+        margin-top:16px;
+        width:100%;
+        border:0px solid transparent;
+        .neat-img-overlay{
+            width:100%;
+            height:200px;
+            div { 
+                background-color:fadeOut(@transparent-light-color, 40%); 
+            } 
+            overflow:visible;
+        }
+        &:hover .neat-img-overlay {
+            div { 
+                background-color:fadeIn(@transparent-dark-color, 20%); 
+            }
+            h6 { color: @light-color; }
+            h4 { color: @main-color; }
+        } 
+    }
+    .secondary-button { 
+        background-color:@light-secondary-color; 
+        width:auto; 
+        position:absolute; 
+        bottom:-28px;
+    }
+}
+
+
+
+

@@ -19,6 +19,7 @@
   <script src="components/images/images.js"></script>
   <script src="components/responsive/responsive.js"></script>
   <script src="components/template/template.js"></script>
+  <script src="components/accordions/accordions.js"></script>   
 
   <script src="js/splat.js"></script>
 
@@ -66,7 +67,7 @@
 
 
 
-        <a href="#portfolio" class="scroll default-button">See Portfolio</a>
+        <a href="#portfolio" class="scroll secondary-button">See Portfolio</a>
         <a href="#contact" class="scroll primary-button">Contact</a>
       </div>
     </div>
@@ -80,61 +81,69 @@
           <span class="fas fa-laptop-code"></span>
           <span class="fas fa-server"></span>
         </h1>
-        <h2>"Engineers like to solve problems. If there are no problems handily available, they will create their own problems." <span class="subtext">-Scott Adams</span></h2>
+        <h2></h2>
         <hr class="title-hr" />
         <h4>Experienced Full Stack Developer with passions for design, front-end development & database engineering.</h4>
-        <h4>Specialties doing Wordpress Updates & Templates, & Plugins, and Responsive HTML5 & CSS components.</h4>
+        <hr class="title-hr" style="width:40%;" />
+        <h4>Specialties doing Wordpress, HTML, CSS, And Javascript, from PSD or my own design.</h4>
         <hr class="title-hr" />
         <h5>HTML, CSS, SASS/LESS, Javascript, React/Redux, JQuery, AJAX, Wordpress, PHP, Ruby on Rails, MySQL, PostgreSQL, Java, C++, C, Assembly</h5>
       </div>
     </section>
-
-    <section id="skills" class="page-section triple-intro">
-      <div class="container">
+    <section id="skills" class="page-section">
+      <div class="container triple-intro-one">
         <h5>All-In-One Technology Solutions For Your Needs</h5>
-        <h2>Freelance & Remote Project Team Member</h2>
+        <h2>Remote Freelancer <br />& Project Team Member</h2>
         <hr />
-        <div class="row">
-          <div class="box-12-mobile box-tablet-6 box-desktop-4">
+        <div class="row tic">
+          <div class="col-sm-12 col-md-6 col-lg-4 tii">
             <div class="container">
-              <div class='neat-img-overlay'>
-                <div></div>
-                <!--Necessary empty div for overlay-->
-                <img src="img/design.jpg" />
+              <div class='tiip'>
+                <div><span class="fas fa-drafting-compass"></span></div>
               </div>
-              <h3>Design</h3>
-              <p>Websites, logos, brands, ad campaigns.</p>
+              <div class='tiit'>
+                <h3> Design </h3>
+                <p>- Websites & Wordpress<br />
+                  - Logos & Brands<br />
+                  - HTML & CSS Components<br />
+                  - Ad Campaigns</p>
+              </div>
             </div>
           </div>
-          <div class="box-12-mobile box-tablet-6 box-desktop-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 tii">
             <div class="container">
-              <div class='neat-img-overlay'>
-                <div></div>
-                <!--Necessary empty div for overlay-->
-                <img src="img/development.jpg" />
+              <div class='tiip'>
+                <div><span class="fas fa-laptop-code"></span></div>
               </div>
-              <h3>Development</h3>
-              <p>Landing pages, portfolios, blogs, company websites or custom applications.</p>
+              <div class="tiit">
+                <h3> Development </h3>
+              <p>- Landing Pages & Websites<br />
+                - Squarespace & WordPress<br />
+                - Portfolios & Blogs<br />
+                - Plugins & WebApps</p>
+              </div>
 
             </div>
           </div>
-          <div class="box-12-mobile box-tablet-12 box-desktop-4">
+          <div class="col-sm-12 col-md-6 col-lg-4 tii">
             <div class="container">
-              <div class='neat-img-overlay'>
-                <div></div>
-                <!--Necessary empty div for overlay-->
-                <img src="img/marketing.jpg" />
-
+              <div class='tiip'>
+                <div><span class="fas fa-chart-bar"></span></div>
               </div>
-              <h3>Marketing</h3>
-              <p>SEO, ads, content writing, social media management</p>
-
+              <div class="tiit">
+                <h3> Marketing </h3>
+                <p>- SEO & Blog Writing<br />
+                   - Copy & Content Writing<br />
+                   - Social Media Engagement<br />
+                   - Ads & Leads</p>
+              </div>
             </div>
           </div>
         </div>
       </div>
     </section>
-
+    </section>
+    
     <div id="portfolio" class="page-section gallery">
       <div class="container">
         <div class="row">
@@ -145,86 +154,103 @@
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>SPLAT</h4>
+              
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>SPLAT</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/splat.jpg" />
-              </div>
               <h6>A single-page responsive HTML Template with features & components. This portfolio is buit using this template.</h6>
-              <a class='secondary-button' href="#">Live Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-laptop'></span></a>
+                
+            
+            </div>
             </div>  
           </div>
 
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>ScaleTheory</h4>
+              
               
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>ScaleTheory</h4>
                 <!--Necessary empty div for overlay-->
                 <img src="img/scaletheory.jpg" />
-              </div>
                 <h6>A Javascript WebApp for guitarists & musicians. Dynamically contains 50+ instruments, tunings, and scales, and lets the user customize the scale and tuning.</h6>
-              <a class='secondary-button' href="#">Live Link</a>
+
+
+                <a class='secondary-button' href="#"><span class='fas fa-desktop'></span></a>              </div>
+
+            
             </div>  
           </div>
 
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>Responsive.CSS</h4>
+              
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>Responsive.CSS</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/responsive.jpg" />
-              </div>
               <h6>A collection of 75+ CSS classes for responsive design.</h6>
-              <a class='secondary-button' href="#">Github Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+                
+            </div>
             </div>  
           </div>
 
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>JLC West, INC.</h4>
+              
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>JLC West, INC.</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/jlc.jpg" />
-              </div>
+              
               <h6>Single page marketing demo website for a small business, including contact form.</h6>
-              <a class='secondary-button' href="#">Demo Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+            
+            </div>
             </div>  
           </div>
           
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
+              
+              
+            <div class='neat-img-overlay'>
+              <div></div>
               <h4>VaxTrack Demo</h4>
-              <div class='neat-img-overlay'>
-                <div></div>
                 <!--Necessary empty div for overlay-->
               <img src="img/vaxtrack.jpg" />
-              </div>
               <h6>A sleek multipage template built using Responsive.CSS.</h6>
-              <a class='secondary-button' href="#">Demo Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+            
+            </div>
             </div>  
           </div>
 
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>Colors.LESS</h4>
+              
               
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>Colors.LESS</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/colors.jpg" />
-              </div>
               <h6>A library containing a palette of 60+ generated color variables for use off of a single user input.</h6>
-              <a class='secondary-button' href="#">Github Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+            
+            </div>
             </div>  
           </div>
 
@@ -232,43 +258,51 @@
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>NYCElite Design</h4>
+              
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>NYCElite Design</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/v1.png" />
-              </div>
               <h6></h6>
+              <a class='secondary-button' href="#"><span class='fas fa-image'></span></a>
+            
+            </div>
             </div>  
           </div>
           
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
             <div class='image-attribution-box'>
-              <h4>HTML Components</h4>
+              
               
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>HTML Components</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/codepenarticle.jpg" />
-              </div>
               <h6></h6>
-              <a class='secondary-button' href="#">Codepen Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+            
+            </div>
             </div>  
           </div>
 
           <!--ENTRY-->
           <div class='box-mobile-12 box-tablet-6 box-desktop-4'>
+            
             <div class='image-attribution-box'>
-              <h4>Custom Links</h4>
+              
               
               <div class='neat-img-overlay'>
                 <div></div>
+                <h4>Custom Links</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/codepencolorful.jpg" />
-              </div>
               <h6></h6>
-              <a class='secondary-button' href="#">Github Link</a>
+              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+            
+            </div>
             </div>  
           </div>
 
@@ -287,13 +321,20 @@
 
               Email: <input type="text" name="email">
               
-              Reason for Contact: <select name="reason">
-                <option>Freelance Design</option>
-                <option>Freelance Design</option>
-                <option>Freelance Design</option>
+              Reason for Contact, I'd like Information for: <select name="reason" multiple="true">
+                <option>General Web/Technology Needs</option>
+                <option>Wordpress Installations & Upgrades</option>
+                <option>A New Website Built</option>
+                <option>Old Website Updated/Redesigned</option>
+                <option>Current Site Debugged/Polished</option>
+                <option>Logo Design & Branding</option>
+                <option>SEO & Optimization</option>
+                <option>Custom Web Apps/Mobile Apps</option>
+                <option>General/Misc.</option>
               </select>
+              <span class="subtext">Hold CTRL/CMD to select multiple</span>
               
-              Message: <textarea name="message"></textarea>
+              Describe Your Situation/Needs: <textarea name="message"></textarea>
               
               <input type="submit" class="primary-button">
             

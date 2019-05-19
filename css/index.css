@@ -608,7 +608,7 @@ Responsive boxes & rows
   align-items: center;
   text-align: center;
   min-height: 100vh;
-  background: url('../img/computer.jpg');
+  background: url('../img/selfie.jpg');
   background-size: cover;
   border-bottom: 4px solid #453133;
 }
@@ -619,8 +619,16 @@ Responsive boxes & rows
 }
 .main-screen h4,
 .main-screen h5 {
-  color: #b35c64;
+  color: #c37f85;
   margin: 25px;
+  font-weight: bold;
+  text-shadow: 1px 1px #5c1f1a, -1px 1px #5c1f1a, 1px -1px #5c1f1a, -1px -1px #5c1f1a;
+}
+.main-screen h4 {
+  font-size: 2em;
+}
+.main-screen h5 {
+  font-size: 1.5em;
 }
 .main-screen h6 {
   color: #888888;
@@ -631,6 +639,7 @@ Responsive boxes & rows
 .main-screen h1 {
   color: #f0ebeb;
   font-size: 6rem;
+  text-shadow: 2px 2px #842c25, -2px 2px #842c25, 2px -2px #842c25, -2px -2px #842c25;
 }
 @media screen and (max-width: 700px) {
   .main-screen h1 {
@@ -668,7 +677,7 @@ Responsive boxes & rows
   }
 }
 .main-screen.main-screen-layout-2 h1 {
-  font-size: 4rem;
+  font-size: 4.5rem;
 }
 .main-screen.main-screen-layout-2 h4,
 .main-screen.main-screen-layout-2 h5 {
@@ -767,13 +776,16 @@ Collapseable for mobile.
 }
 #top-nav .logo-and-name h3 {
   display: inline-block;
-  font-family: "Mr Dafoe";
+  font-family: "Alegreya SC";
   color: #f0ebeb;
 }
 @media screen and (max-width: 700px) {
   #top-nav .logo-and-name h3 {
     display: none;
   }
+}
+#top-nav .logo-and-name h3 span {
+  color: #842c25;
 }
 #top-nav ul {
   display: flex;
@@ -830,12 +842,12 @@ Collapseable for mobile.
 }
 #top-nav.top-nav-transparent h3,
 #top-nav.top-nav-transparent h2 {
-  text-shadow: -1px -1px 0 #b35c64, 1px -1px 0 #b35c64, -1px 1px 0 #b35c64, 1px 1px 0 #271c1d;
+  text-shadow: -1px -1px 0 #b35c64, 1px -1px 0 #b35c64, -1px 1px 0 #b35c64, 1px 1px 0 #b35c64;
 }
 @media screen and (max-width: 700px) {
   #top-nav.top-nav-transparent a {
     background-color: rgba(240, 235, 235, 0.95);
-    text-shadow: -1px -1px 0 #b35c64, 1px -1px 0 #b35c64, -1px 1px 0 #b35c64, 1px 1px 0 #271c1d;
+    text-shadow: -1px -1px 0 #b35c64, 1px -1px 0 #b35c64, -1px 1px 0 #b35c64, 1px 1px 0 #b35c64;
   }
 }
 #top-nav.top-nav-colorful {
@@ -1160,9 +1172,11 @@ textarea:focus {
 a.default-button {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   margin: 10px 0;
-  padding: 8px 15px;
+  padding: 12px 20px;
+  font-size: 1.2em;
   border-radius: 4px;
   border: 2px solid #f0ebeb;
   color: #271c1d;
@@ -1171,7 +1185,7 @@ a.default-button {
 @media screen and (min-width: 1000px) {
   .default-button,
   a.default-button {
-    width: auto;
+    width: 200px;
     margin: 5px;
   }
 }
@@ -1185,9 +1199,11 @@ a.default-button:hover {
 a.primary-button {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   margin: 10px 0;
-  padding: 8px 15px;
+  padding: 12px 20px;
+  font-size: 1.2em;
   border-radius: 4px;
   border: 2px solid #842c25;
   color: #f0ebeb;
@@ -1196,7 +1212,7 @@ a.primary-button {
 @media screen and (min-width: 1000px) {
   .primary-button,
   a.primary-button {
-    width: auto;
+    width: 200px;
     margin: 5px;
   }
 }
@@ -1210,9 +1226,11 @@ a.primary-button:hover {
 a.secondary-button {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   margin: 10px 0;
-  padding: 8px 15px;
+  padding: 12px 20px;
+  font-size: 1.2em;
   border-radius: 4px;
   border: 2px solid #a7a168;
   color: #f0ebeb;
@@ -1221,7 +1239,7 @@ a.secondary-button {
 @media screen and (min-width: 1000px) {
   .secondary-button,
   a.secondary-button {
-    width: auto;
+    width: 200px;
     margin: 5px;
   }
 }
@@ -1235,9 +1253,11 @@ a.secondary-button:hover {
 a.cancel-button {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   margin: 10px 0;
-  padding: 8px 15px;
+  padding: 12px 20px;
+  font-size: 1.2em;
   border-radius: 4px;
   border: 2px solid #d92e32;
   color: #f0ebeb;
@@ -1246,7 +1266,7 @@ a.cancel-button {
 @media screen and (min-width: 1000px) {
   .cancel-button,
   a.cancel-button {
-    width: auto;
+    width: 200px;
     margin: 5px;
   }
 }
@@ -1260,9 +1280,11 @@ a.cancel-button:hover {
 a.confirm-button {
   display: inline-block;
   text-decoration: none;
+  text-align: center;
   width: 100%;
   margin: 10px 0;
-  padding: 8px 15px;
+  padding: 12px 20px;
+  font-size: 1.2em;
   border-radius: 4px;
   border: 2px solid #5a6e32;
   color: #f0ebeb;
@@ -1271,7 +1293,7 @@ a.confirm-button {
 @media screen and (min-width: 1000px) {
   .confirm-button,
   a.confirm-button {
-    width: auto;
+    width: 200px;
     margin: 5px;
   }
 }
@@ -1312,4 +1334,103 @@ SPECIFIC OBJECTS
 }
 .example-image img {
   width: 100%;
+}
+.triple-intro-one img {
+  width: 100%;
+}
+.tiit {
+  margin-top: -43px;
+}
+.tiit h3 {
+  display: block;
+  border-top: 1px solid #dbcdce;
+  background-color: #b35c64;
+  font-family: "Racing Sans One";
+  padding: 10px 0 5px;
+  margin-bottom: 0;
+  color: #842c25;
+  text-align: center;
+}
+.tiit p {
+  background-color: #b35c64;
+  margin-top: 0;
+  padding: 5px 20px 20px 32px;
+  height: 125px;
+  text-align: left;
+  color: #f0ebeb;
+  border-bottom-left-radius: 4px;
+  border-bottom-right-radius: 4px;
+  border-bottom: 2px solid #842c25;
+}
+@media screen and (max-width: 700px) {
+  .tiit p {
+    height: auto;
+  }
+}
+.tiip {
+  background-size: cover;
+  border-top-left-radius: 4px;
+  border-top-right-radius: 4px;
+}
+.tic .tii:nth-child(1) .tiip {
+  background-image: url("../img/design.jpg");
+}
+.tic .tii:nth-child(2) .tiip {
+  background-image: url("../img/development.jpg");
+}
+.tic .tii:nth-child(3) .tiip {
+  background-image: url("../img/marketing.jpg");
+}
+.tiip > div {
+  width: 100%;
+  height: 200px;
+  background-color: rgba(179, 92, 100, 0.7);
+}
+.tiip .fas {
+  width: 100%;
+  text-align: center;
+  height: 100%;
+  color: #dbcdce;
+  font-size: 5em;
+  margin-top: 35px;
+  text-shadow: 1px 1px #5c1f1a, -1px 1px #5c1f1a, 1px -1px #5c1f1a, -1px -1px #5c1f1a;
+}
+#portfolio h6 {
+  color: #5c1f1a;
+  position: absolute;
+  color: transparent;
+}
+#portfolio h4 {
+  color: transparent;
+  position: absolute;
+  top: 0;
+  font-family: "Racing Sans One";
+}
+#portfolio .image-attribution-box {
+  margin-top: 16px;
+  width: 100%;
+  border: 0px solid transparent;
+}
+#portfolio .image-attribution-box .neat-img-overlay {
+  width: 100%;
+  height: 200px;
+  overflow: visible;
+}
+#portfolio .image-attribution-box .neat-img-overlay div {
+  background-color: rgba(240, 235, 235, 0.3);
+}
+#portfolio .image-attribution-box:hover .neat-img-overlay div {
+  background-color: rgba(39, 28, 29, 0.9);
+}
+#portfolio .image-attribution-box:hover .neat-img-overlay h6 {
+  color: #f0ebeb;
+}
+#portfolio .image-attribution-box:hover .neat-img-overlay h4 {
+  color: #b35c64;
+}
+#portfolio .secondary-button {
+  background-color: #bab588;
+  width: auto;
+  position: absolute;
+  bottom: -28px;
 }

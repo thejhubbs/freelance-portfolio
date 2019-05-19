@@ -11,7 +11,14 @@
 	background-size: cover;
 	border-bottom: 4px solid @light-dark-color;
 
-	h4, h5 { color: @main-color; margin: 25px;}
+	h4, h5 { 
+		color: @light-main-color; 
+		margin: 25px; 
+		font-weight:bold;
+		text-shadow:1px 1px @dark-highlight-color, -1px 1px @dark-highlight-color, 1px -1px @dark-highlight-color, -1px -1px @dark-highlight-color; 
+	}
+	h4 {font-size:2em;}
+	h5 {font-size:1.5em;}
 	h6 {color:@grey-color;}
 	
     hr { margin: 12px auto 36px;}
@@ -19,6 +26,7 @@
 	h1 {
 		color: @light-color;
 		font-size: 6rem;
+		text-shadow:2px 2px @highlight-color, -2px 2px @highlight-color, 2px -2px @highlight-color, -2px -2px @highlight-color; 
 		@media @mobile { font-size: 6rem; }
 		@media @hard-tablet { font-size: 8rem; }
 	}
@@ -38,7 +46,7 @@
 	}
 	.title-hr {margin:24px 0; 
 		@media @mobile {margin:24px auto;} }
-	h1 { font-size: 4rem; }
+	h1 { font-size: 4.5rem; }
 	h4, h5 {margin-top:10px;}
 	a{}
 }

@@ -36,9 +36,10 @@ Collapseable for mobile.
 		}
 		h3 {
 			display:inline-block;
-			font-family: @unique-text-font;
+			font-family: @header-text-font;
 			color: @nav-title-color;
 			@media @mobile { display:none; }
+			span { color: @highlight-color; } 
 		}
 
 	}
@@ -77,14 +78,14 @@ Collapseable for mobile.
 		-1px -1px 0 @main-color,
 		1px -1px 0 @main-color,
 		-1px 1px 0 @main-color,
-		1px 1px 0 @dark-color;
+		1px 1px 0 @main-color;
 	}
 	a {@media @mobile {background-color:fadeout(@light-color, 5%);
 		text-shadow:
 		-1px -1px 0 @main-color,
 		1px -1px 0 @main-color,
 		-1px 1px 0 @main-color,
-		1px 1px 0 @dark-color;
+		1px 1px 0 @main-color;
 	}
 }
 }
