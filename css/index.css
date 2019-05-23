@@ -619,10 +619,9 @@ Responsive boxes & rows
 }
 .main-screen h4,
 .main-screen h5 {
-  color: #c37f85;
-  margin: 25px;
+  color: #e4c4c7;
+  margin: 25px 0;
   font-weight: bold;
-  text-shadow: 1px 1px #5c1f1a, -1px 1px #5c1f1a, 1px -1px #5c1f1a, -1px -1px #5c1f1a;
 }
 .main-screen h4 {
   font-size: 2em;
@@ -1002,10 +1001,7 @@ textarea:focus {
   background-color: rgba(179, 92, 100, 0.3);
 }
 .neat-img-overlay img {
-  max-width: 100%;
-  max-height: 100%;
-  width: auto;
-  height: auto;
+  height: 100%;
 }
 .light-img-overlay {
   display: flex;
@@ -1178,7 +1174,7 @@ a.default-button {
   padding: 12px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  border: 2px solid #f0ebeb;
+  border: 4px solid #f0ebeb;
   color: #271c1d;
   background-color: #f0ebeb;
 }
@@ -1191,7 +1187,7 @@ a.default-button {
 }
 .default-button:hover,
 a.default-button:hover {
-  border: 2px outset #f0ebeb;
+  border: 4px solid #f0ebeb;
   color: #f0ebeb;
   background: none;
 }
@@ -1205,7 +1201,7 @@ a.primary-button {
   padding: 12px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  border: 2px solid #842c25;
+  border: 4px solid #842c25;
   color: #f0ebeb;
   background-color: #842c25;
 }
@@ -1218,7 +1214,7 @@ a.primary-button {
 }
 .primary-button:hover,
 a.primary-button:hover {
-  border: 2px outset #842c25;
+  border: 4px solid #842c25;
   color: #842c25;
   background: none;
 }
@@ -1232,7 +1228,7 @@ a.secondary-button {
   padding: 12px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  border: 2px solid #a7a168;
+  border: 4px solid #a7a168;
   color: #f0ebeb;
   background-color: #a7a168;
 }
@@ -1245,7 +1241,7 @@ a.secondary-button {
 }
 .secondary-button:hover,
 a.secondary-button:hover {
-  border: 2px outset #a7a168;
+  border: 4px solid #a7a168;
   color: #a7a168;
   background: none;
 }
@@ -1259,7 +1255,7 @@ a.cancel-button {
   padding: 12px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  border: 2px solid #d92e32;
+  border: 4px solid #d92e32;
   color: #f0ebeb;
   background-color: #d92e32;
 }
@@ -1272,7 +1268,7 @@ a.cancel-button {
 }
 .cancel-button:hover,
 a.cancel-button:hover {
-  border: 2px outset #d92e32;
+  border: 4px solid #d92e32;
   color: #d92e32;
   background: none;
 }
@@ -1286,7 +1282,7 @@ a.confirm-button {
   padding: 12px 20px;
   font-size: 1.2em;
   border-radius: 4px;
-  border: 2px solid #5a6e32;
+  border: 4px solid #5a6e32;
   color: #f0ebeb;
   background-color: #5a6e32;
 }
@@ -1299,7 +1295,7 @@ a.confirm-button {
 }
 .confirm-button:hover,
 a.confirm-button:hover {
-  border: 2px outset #5a6e32;
+  border: 4px solid #5a6e32;
   color: #5a6e32;
   background: none;
 }
@@ -1344,18 +1340,18 @@ SPECIFIC OBJECTS
 .tiit h3 {
   display: block;
   border-top: 1px solid #dbcdce;
+  border-bottom: 2px solid #5c1f1a;
   background-color: #b35c64;
   font-family: "Racing Sans One";
-  padding: 10px 0 5px;
+  padding: 10px 0 10px;
   margin-bottom: 0;
   color: #842c25;
   text-align: center;
 }
 .tiit p {
-  background-color: #b35c64;
+  background-color: #ac3930;
   margin-top: 0;
-  padding: 5px 20px 20px 32px;
-  height: 125px;
+  padding: 10px 20px 20px 32px;
   text-align: left;
   color: #f0ebeb;
   border-bottom-left-radius: 4px;
@@ -1399,22 +1395,32 @@ SPECIFIC OBJECTS
   color: #5c1f1a;
   position: absolute;
   color: transparent;
+  width: 100%;
+  left: 0;
+  margin: 0;
+  padding: 6px;
 }
 #portfolio h4 {
+  padding: 6px;
+  width: 100%;
+  left: 0;
+  margin: 0;
   color: transparent;
   position: absolute;
   top: 0;
   font-family: "Racing Sans One";
 }
 #portfolio .image-attribution-box {
-  margin-top: 16px;
+  margin: 0;
+  padding: 8px;
   width: 100%;
   border: 0px solid transparent;
 }
 #portfolio .image-attribution-box .neat-img-overlay {
   width: 100%;
   height: 200px;
-  overflow: visible;
+  border: 4px inset #b35c64;
+  border-bottom-width: 4px;
 }
 #portfolio .image-attribution-box .neat-img-overlay div {
   background-color: rgba(240, 235, 235, 0.3);
@@ -1426,11 +1432,34 @@ SPECIFIC OBJECTS
   color: #f0ebeb;
 }
 #portfolio .image-attribution-box:hover .neat-img-overlay h4 {
-  color: #b35c64;
+  color: #a7a168;
 }
 #portfolio .secondary-button {
-  background-color: #bab588;
+  background-color: transparent;
+  border: 0px solid transparent;
+  color: #a7a168;
+  text-shadow: 1px 1px #271c1d, -1px -1px #271c1d, -1px 1px #271c1d, 1px -1px #271c1d;
   width: auto;
   position: absolute;
-  bottom: -28px;
+  bottom: -13px;
+}
+.form-subtext {
+  display: block;
+  font-size: 80%;
+  margin-top: -15px;
+  margin-bottom: 20px;
+  color: #dbcdce;
+  font-style: italic;
+}
+.form-subtext::before {
+  content: "(";
+}
+.form-subtext::after {
+  content: ")";
+}
+#footer span {
+  font-size: 15px;
+}
+#footer a {
+  color: #c37f85;
 }

@@ -67,7 +67,7 @@
 
 
 
-        <a href="#portfolio" class="scroll secondary-button">See Portfolio</a>
+        <a href="#portfolio" class="scroll default-button">See Portfolio</a>
         <a href="#contact" class="scroll primary-button">Contact</a>
       </div>
     </div>
@@ -161,7 +161,7 @@
                 <!--Necessary empty div for overlay-->
               <img src="img/splat.jpg" />
               <h6>A single-page responsive HTML Template with features & components. This portfolio is buit using this template.</h6>
-              <a class='secondary-button' href="#"><span class='fas fa-laptop'></span></a>
+              <a class='secondary-button' href="http://splat.website" target="_blank"><span class='fas fa-laptop'></span></a>
                 
             
             </div>
@@ -181,7 +181,7 @@
                 <h6>A Javascript WebApp for guitarists & musicians. Dynamically contains 50+ instruments, tunings, and scales, and lets the user customize the scale and tuning.</h6>
 
 
-                <a class='secondary-button' href="#"><span class='fas fa-desktop'></span></a>              </div>
+                <a class='secondary-button' href="http://scale-theory.site" target="_blank"><span class='fas fa-desktop'></span></a>              </div>
 
             
             </div>  
@@ -196,8 +196,8 @@
                 <h4>Responsive.CSS</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/responsive.jpg" />
-              <h6>A collection of 75+ CSS classes for responsive design.</h6>
-              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+              <h6>A collection of 75+ CSS classes for responsive design, all based on size breakpoints. Emmulates Bootstrap in look, but smaller file size due to simpler implementation.</h6>
+              <a class='secondary-button' href="https://github.com/thejhubbs/responsive" target="_blank"><span class='fas fa-code'></span></a>
                 
             </div>
             </div>  
@@ -213,8 +213,8 @@
                 <!--Necessary empty div for overlay-->
               <img src="img/jlc.jpg" />
               
-              <h6>Single page marketing demo website for a small business, including contact form.</h6>
-              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+              <h6>Single page Wordpress site designed & built for a small business, including a contact form and an animated.</h6>
+              <a class='secondary-button' href="https://thejhubbs.github.io/livedemos/JLC/index.html" target="_blank"><span class='fas fa-laptop-code'></span></a>
             
             </div>
             </div>  
@@ -230,8 +230,8 @@
               <h4>VaxTrack Demo</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/vaxtrack.jpg" />
-              <h6>A sleek multipage template built using Responsive.CSS.</h6>
-              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+              <h6>A sleek multipage template built using Responsive.CSS. </h6>
+              <a class='secondary-button' href="https://bw1-webpt6-immunization-tracking.github.io/marketing_immization_tracking/" target="_blank"><span class='fas fa-laptop-code'></span></a>
             
             </div>
             </div>  
@@ -247,8 +247,8 @@
                 <h4>Colors.LESS</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/colors.jpg" />
-              <h6>A library containing a palette of 60+ generated color variables for use off of a single user input.</h6>
-              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+              <h6>A LESS library containing a palette of 60+ generated color variables for use in a consistent design, all generated from a single user input.</h6>
+              <a class='secondary-button' href="https://github.com/thejhubbs/colors" target="_blank"><span class='fas fa-code'></span></a>
             
             </div>
             </div>  
@@ -264,8 +264,8 @@
                 <h4>NYCElite Design</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/v1.png" />
-              <h6></h6>
-              <a class='secondary-button' href="#"><span class='fas fa-image'></span></a>
+              <h6>A Wordpress theme redesigned to fit the client's brand</h6>
+              <a class='secondary-button' href="https://codepen.io/Thejhubbs/pen/xNgRMP" target="_blank"><span class='fas fa-image'></span></a>
             
             </div>
             </div>  
@@ -280,9 +280,9 @@
                 <div></div>
                 <h4>HTML Components</h4>
                 <!--Necessary empty div for overlay-->
-              <img src="img/codepenarticle.jpg" />
-              <h6></h6>
-              <a class='secondary-button' href="#"><span class='fas fa-laptop-code'></span></a>
+                <img src="img/codepenarticle.jpg" />
+                <h6>Custom HTML and CSS components built for a client</h6>
+              <a class='secondary-button' href="https://codepen.io/Thejhubbs/pen/zQoYYj" target="_blank"><span class='fas fa-laptop-code'></span></a>
             
             </div>
             </div>  
@@ -299,8 +299,8 @@
                 <h4>Custom Links</h4>
                 <!--Necessary empty div for overlay-->
               <img src="img/codepencolorful.jpg" />
-              <h6></h6>
-              <a class='secondary-button' href="#"><span class='fas fa-code'></span></a>
+              <h6>Custom HTML and CSS components built for a client</h6>
+              <a class='secondary-button' href="https://codepen.io/Thejhubbs/pen/WBjZGJ" target="_blank"><span class='fas fa-code'></span></a>
             
             </div>
             </div>  
@@ -315,13 +315,20 @@
       <div class="container">
         <div class="row">
           <div class="box-12">
+            <h3 id="message-confirm" style="display:none;">Your message was sent and you will be contacted shortly.<br /> Thank You.</h3>
+            
+            <script>
+              if(location.href.includes("message=sent")){ 
+                document.querySelector("#message-confirm").setAttribute('style', "display:block;");
+              };</script>
             <h2>Contact</h2>
             <form action="contact.php" method="POST">
               Name: <input type="text" name="name">
 
               Email: <input type="text" name="email">
+              <span class="form-subtext">The place for me to respond</span>
               
-              Reason for Contact, I'd like Information for: <select name="reason" multiple="true">
+              Reason for Contact, I'd like Information for: <select name="reason[]" multiple="true">
                 <option>General Web/Technology Needs</option>
                 <option>Wordpress Installations & Upgrades</option>
                 <option>A New Website Built</option>
@@ -332,9 +339,9 @@
                 <option>Custom Web Apps/Mobile Apps</option>
                 <option>General/Misc.</option>
               </select>
-              <span class="subtext">Hold CTRL/CMD to select multiple</span>
+              <span class="form-subtext">Hold CTRL/CMD to select multiple</span>
               
-              Describe Your Situation/Needs: <textarea name="message"></textarea>
+              In a few sentences, Please Describe Your Situation/Needs: <textarea name="message"></textarea>
               
               <input type="submit" class="primary-button">
             
@@ -354,9 +361,8 @@
       <hr />
       <h6>This page was designed & developed, written & produced by Jordan Hubbard.</h6>
       <ul>
-        <li>My Portfolio</li>
-        <li>My Github</li>
-        <li>My Email</li>
+        <li><a class='scroll' href="#portfolio">My Portfolio</a></li>
+        <li><a href="http://github.com/thejhubbs" target="_blank">My Github Account</a></li>
       </ul>
     </div>
   </div>
